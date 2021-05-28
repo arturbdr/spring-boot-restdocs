@@ -20,7 +20,6 @@ public class PersonController {
 
     @PostMapping(value = "/person", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
     public ResponseEntity<Person> createPerson(@RequestBody @Valid PersonRequest personRequest) {
-
         return ResponseEntity.status(CREATED)
                 .body(Person.builder()
                         .age(personRequest.getAge())
